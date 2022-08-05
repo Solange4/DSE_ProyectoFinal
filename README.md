@@ -13,6 +13,7 @@ Nuestra propuesta consiste en un nuevo módulo para Odoo que con los datos extra
 
 ## Herramientas ha usar
 **Frotend:** html, css
+
 **Backend:** python
 
 ## Prototipo
