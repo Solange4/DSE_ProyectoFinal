@@ -9,9 +9,9 @@ Solange Aracely Romero Chacón
 Luisa Villanueva Guerrero
 
 ## Propuesta
-la propuesta del trabajo consiste en crear una aplicación que aproveche los datos provenientes de los informes de ventas de productos de Odoo. A ellos se les aplica un modelo de machine learning a fin de predecr la demanda de un producto en específico para un período de tiempo indicado por el usuario.
+La propuesta del trabajo consiste en crear una aplicación que aproveche los datos provenientes de los informes de ventas de productos de Odoo. A ellos se les aplica un modelo de machine learning a fin de predecr la demanda de un producto en específico para un período de tiempo indicado por el usuario.
 
-## Herramientas ha usar
+## Herramientas
 **Frotend:** html, css
 
 **Backend:** python
