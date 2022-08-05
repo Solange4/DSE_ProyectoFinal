@@ -9,7 +9,7 @@ Solange Aracely Romero Chacón
 Luisa Villanueva Guerrero
 
 ## Propuesta
-Nuestra propuesta consiste en un nuevo módulo para Odoo que con los datos extraidos de esta plataforma sea capaz de predecir la demanda de un producto en específico para un periodo de tiempo indicado por el usuario.
+la propuesta del trabajo consiste en crear una aplicación que aproveche los datos provenientes de los informes de ventas de productos de Odoo. A ellos se les aplica un modelo de machine learning a fin de predecr la demanda de un producto en específico para un período de tiempo indicado por el usuario.
 
 ## Herramientas ha usar
 **Frotend:** html, css
