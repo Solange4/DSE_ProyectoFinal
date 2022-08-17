@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    background-color: #F3F3F3;
+}
+
+header {
+    background-color: #AF7DA1;
+    height: 4em;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    display: inline-block;
+    vertical-align: center;
+}
+
+.container_p {
+    height: 30em;
+    width: 30em;
+    margin: 4em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.container_info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #AF7DA1;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.inputs-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.inputs-container>label {
+    padding-top: 2rem;
+    font-size: 1rem;
+}
+
+.select {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 90%;
+    height: 4rem;
+    border: none;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.btn {
+    margin-bottom: 4px;
+    border-radius: 5px;
+    width: 40%;
+    height: 4rem;
+    border: none;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #AF7DA1;
+    cursor: pointer;
+}
+
+
+/* */
+
+.container_predic {
+    height: 35em;
+    width: 92em;
+    margin: 4em auto;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+}
+
+.titleR {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #AF7DA1;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.resultado_img {
+    padding-top: 2rem;
+    height: 60%;
+    width: 70%;
+    margin: 4em auto;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    background-color: #ECECEC;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.resultado_info {
+    position: absolute;
+    background-color: #ECECEC;
+    height: 10%;
+    width: 67.5%;
+    margin: 4em auto;
+    border-radius: 10px;
+    bottom: 0px;
+    padding-top: 1rem;
+    left: 25%;
+    margin-left: -28px;
+}
+
+.text {
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color: black;
+    font-weight: 600;
+    padding-left: 1rem;
+    padding: auto;
+    padding-top: 4rem;
+}
