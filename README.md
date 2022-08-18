@@ -32,6 +32,11 @@ To Run:
 - python manage.py migrate(si es la primera ves que corres el projecto en tu PC)
 - python manage.py runserver(dentro de la carpeta dse_odoo)
 
+Another facts:
+- Para que funcione correctamente, tienes que cambiar 2 directorios en
+    - dse_odoo/settings.py line 58
+    - dse_odoo/models/prediction.py line 16 (path a los .xlsx inputs) 
+
 ## Prototipo
 https://www.figma.com/file/Crinn4ilJwxREZiEF6xmmy/DSE
 
