@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,43 +10,44 @@
 </head>
 
 <body>
-    <header class="index">
-        <div>
+    <header>
             <img src="{% static '/icons/cuadros.png' %}" class="logo" width="50px" height="25px">
-            <p class="name">Módulo de Predicción</p>
-        </div>
+            <h2>Módulo de Predicci&oacute;n</h2>
     </header>
 
-    <div class="container_p">
-        <div class="container_predic_info">
-            <h1 class="title">Realizar Búsqueda</h1>
-            <form class="inputs-container" action="/prediction/" method="get">
-                <label for="product">Elegir producto:</label>
-                <select id="products" name="producto">
-                    {% for prod in productos %}
-                        <option value="{{forloop.counter}}">{{prod}}</option>
-                    {% endfor %}
-                </select>
-                <label for="date">Elegir fecha:</label>
-                <select id="dates" name="mes">
-                    <option value="enero">Enero</option>
-                    <option value="febrero">Febrero</option>
-                    <option value="marzo">Marzo</option>
-                    <option value="abril">Abril</option>
-                    <option value="mayo">Mayo</option>
-                    <option value="junio">Junio</option>
-                    <option value="julio">Julio</option>
-                    <option value="agosto">Agosto</option>
-                    <option value="setiembre">Septiembre</option>
-                    <option value="octubre">Octubre</option>
-                    <option value="noviembre">Noviembre</option>
-                    <option value="diciembre">Diciembre</option>
-                </select>
-                </br>
-                <button class="btn" type="submit" name="submit">BUSCAR</button>
+    <main>
+        <div class="content">
+            <h1>Realizar B&uacute;squeda</h1>
+            <form action="/prediction/" method="get">
+                <div class="input-section">
+                    <label for="products">Producto</label>
+                    <select id="products" name="producto">
+                        {% for prod in productos %}
+                         <option value="{{forloop.counter}}">{{prod}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="input-section">
+                    <label for="dates">Fecha</label>
+                    <select id="dates" name="mes">
+                        <option value="enero">Enero</option>
+                        <option value="febrero">Febrero</option>
+                        <option value="marzo">Marzo</option>
+                        <option value="abril">Abril</option>
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="setiembre">Septiembre</option>
+                        <option value="octubre">Octubre</option>
+                        <option value="noviembre">Noviembre</option>
+                        <option value="diciembre">Diciembre</option>
+                    </select>
+                </div>
+                    <button class="btn" type="submit" name="submit">BUSCAR</button>
             </form>
         </div>
-    </div>
+    </main>
 
 </body>
 
