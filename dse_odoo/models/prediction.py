@@ -52,7 +52,7 @@ for i in df.index:
 def indice_producto(pos_ini = 0):
     size_df = len(df.index)
     
-    if(pos_ini < (size_df - 1)):
+    if(pos_ini < (size_df)):
         for i in range(pos_ini, size_df):
             if df['Productos'][i][0] == '[':
                 return i
@@ -179,7 +179,7 @@ def prediccion(cod_producto, periodo):
         pred = 0
     return pred
 
-
+#TODO: NOMBRES A LA GRAFICA X:PERIODO(MESES), Y: CANTIDAD, TITULO:PREDICCION DE COMPRAS POR PERIODO DE TIEMPO 
 def plotear():
     plt.switch_backend('AGG')
     plt.scatter(X, y, color="black")
