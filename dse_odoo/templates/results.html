@@ -1,17 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Resultados</title>
 </head>
 
 <body>
     <header class="index">
         <div>
-            <img src="icons/cuadros.png" class="logo" width="50px" height="25px">
+            <img src="{% static 'icons/cuadros.png' %}" class="logo" width="50px" height="25px">
             <p class="name">Módulo de Predicción</p>
         </div>
     </header>
@@ -19,17 +20,17 @@
     <div class="container_predic">
         <h1 class="titleR">Regresión</h1>
         <div class="resultado_img">
-            <img src="icons/cuadros.png" class="result" width="100px" height="50px">
+            <img src="{% static 'foo.png' %}" class="result">
         </div>
         <div class="resultado_info">
             <div class="Producto">
-                <p class="text">PRODUCTO:</p> assf
+                <p class="text">PRODUCTO:</p> {{producto}}
             </div>
             <div class="Fecha">
-                <p class="text">FECHA:</p> assf
+                <p class="text">FECHA:</p> {{mes}}
             </div>
             <div class="Prediccion">
-                <p class="text">PREDICCIÓN:</p> 10
+                <p class="text">PREDICCIÓN:</p> {{cantidad}}
             </div>
         </div>
     </div>

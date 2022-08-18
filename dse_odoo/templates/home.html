@@ -1,17 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <title>Buscar</title>
 </head>
 
 <body>
     <header class="index">
         <div>
-            <img src="icons/cuadros.png" class="logo" width="50px" height="25px">
+            <img src="{% static '/icons/cuadros.png' %}" class="logo" width="50px" height="25px">
             <p class="name">Módulo de Predicción</p>
         </div>
     </header>
@@ -19,14 +20,14 @@
     <div class="container_p">
         <div class="container_predic_info">
             <h1 class="title">Realizar Búsqueda</h1>
-            <form class="inputs-container">
+            <form class="inputs-container" action="/prediction/" method="get">
                 <label for="product">Elegir producto:</label>
-                <select id="products" name="products">
+                <select id="products" name="producto">
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
                 <label for="date">Elegir fecha:</label>
-                <select id="dates" name="dates">
+                <select id="dates" name="mes">
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
