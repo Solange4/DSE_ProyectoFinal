@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'C:/Users/Jim/Documents/py_DSE/dse_odoo/templates'
+            'C:/Users/Jim\Documents/py_DSE/DSE_ProyectoFinal/dse_odoo/templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {

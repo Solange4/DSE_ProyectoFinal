@@ -23,13 +23,24 @@
             <form class="inputs-container" action="/prediction/" method="get">
                 <label for="product">Elegir producto:</label>
                 <select id="products" name="producto">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    {% for prod in productos %}
+                        <option value="{{forloop.counter}}">{{prod}}</option>
+                    {% endfor %}
                 </select>
                 <label for="date">Elegir fecha:</label>
                 <select id="dates" name="mes">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="enero">Enero</option>
+                    <option value="febrero">Febrero</option>
+                    <option value="marzo">Marzo</option>
+                    <option value="abril">Abril</option>
+                    <option value="mayo">Mayo</option>
+                    <option value="junio">Junio</option>
+                    <option value="julio">Julio</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="setiembre">Septiembre</option>
+                    <option value="octubre">Octubre</option>
+                    <option value="noviembre">Noviembre</option>
+                    <option value="diciembre">Diciembre</option>
                 </select>
                 </br>
                 <button class="btn" type="submit" name="submit">BUSCAR</button>

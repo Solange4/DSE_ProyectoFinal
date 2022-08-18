@@ -1,40 +1,35 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
     <title>Resultados</title>
 </head>
 
 <body>
-    <header class="index">
-        <div>
-            <img src="{% static 'icons/cuadros.png' %}" class="logo" width="50px" height="25px">
-            <p class="name">Módulo de Predicción</p>
-        </div>
+    <header>
+        <img src="{% static 'icons/cuadros.png' %}" alt="logo" class="logo">
+        <h2>Módulo de Predicción</h2>
     </header>
-
-    <div class="container_predic">
-        <h1 class="titleR">Regresión</h1>
-        <div class="resultado_img">
-            <img src="{% static 'foo.png' %}" class="result">
-        </div>
-        <div class="resultado_info">
-            <div class="Producto">
-                <p class="text">PRODUCTO:</p> {{producto}}
+    <main>
+        <div class="content">
+            <h1>Regresión</h1>
+            <div class="resultado">
+                <p>Diagrama</p>
+                <img src="{% static 'foo.png' %}" class="result">
             </div>
-            <div class="Fecha">
-                <p class="text">FECHA:</p> {{mes}}
-            </div>
-            <div class="Prediccion">
-                <p class="text">PREDICCIÓN:</p> {{cantidad}}
+            <div class="resultado_info">
+                <p><span>PRODUCTO: </span>{{producto}} </p>
+                <p><span>FECHA: </span> {{mes}} </p>
+                <p><span>CÓDIGO: </span> {{code}} </p>
+                <p><span>PREDICCIÓN: </span> {{cantidad}} </p>
+                
             </div>
         </div>
-    </div>
-
+    </main>
 </body>
 
 </html>

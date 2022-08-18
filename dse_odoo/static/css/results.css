@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    background-color: #F3F3F3;
+    margin: 0;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ENCABEZADO */
+
+header {
+    background-color: #AF7DA1;
+    padding: 10px;
+    height: calc(2rem +28px)
+}
+
+header h2 {
+    font-size: 2rem;
+    display: inline;
+    color: aliceblue;
+}
+
+.logo {
+    width: 4rem;
+    height:2rem;
+    margin-right: 10px;
+}
+
+/* TITULO DEL MODULO */ 
+
+h1 {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #AF7DA1;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    height: calc(100vh - 2rem - 32px);
+    width: 100%;
+    align-items: center;
+}
+
+.content{
+    display: block;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto 0 auto ;
+    padding: 30px 50px;
+    max-height: 90%;
+}
+
+/* CUSTOM */
+
+.resultado,
+.resultado_info {
+    display: block;
+    background-color: #ECECEC;
+    width: 95%;
+    padding: 15px;
+    margin: 30px auto 0 auto;
+    border-radius: 10px;
+}
+
+.resultado p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+}
+
+.resultado img {
+    display: block;
+    max-width: 100%;
+    margin: 17px auto 0 auto;
+    max-height: 300px;
+}
+
+.resultado_info p { 
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.resultado_info span { 
+    font-weight: 600;
+}

@@ -5,10 +5,15 @@ import seaborn as sns
 import hvplot.pandas
 import sklearn
 from sklearn.linear_model import LinearRegression
+
+
+
+
+
 # matplotlib inline
 pd.options.mode.chained_assignment = None  # default='warn'
 
-path = 'C:/Users/Jim/Documents/py_DSE/dse_odoo/data/reporte.xlsx'
+path = 'C:/Users/Jim/Documents/py_DSE/DSE_ProyectoFinal/dse_odoo/data/reporte2.xlsx'
 sheet_name='Análisis de ventas'
 
 df = pd.read_excel(path, sheet_name, header = 2)
@@ -23,8 +28,13 @@ mes_ini = anio_ini = mes_fin = anio_fin = X = y = reg_pred = None
 
 df.columns = ['Productos', 'Total']
 
+lista_productos = df['Productos']
+
+#print(df['Productos'])
 # borra espacios vacios en los string de productos
 df['Productos'] = df['Productos'].str.strip()
+
+
 
 # cambiar nombre de producto por su codigo
 for i in df.index:
@@ -40,7 +50,6 @@ for i in df.index:
 
 # devuelve el indice de la primera aparicion de un producto a partir de una posicion 
 def indice_producto(pos_ini = 0):
-    
     size_df = len(df.index)
     
     if(pos_ini < (size_df - 1)):
@@ -52,7 +61,6 @@ def indice_producto(pos_ini = 0):
 
 # crea el dataframe para un producto específico según su código
 def crear_df_producto(producto): 
-    
     pos_ini = pos_fin = count = 0
     
     for i in df.index:
@@ -116,8 +124,8 @@ def completar_df_producto():
         # se copian los totales del df_prod en el nuevo df_tmp
         for i in df_tmp.index:
 
-            per = str(meses[it_mes]) + " " + str(it_anio);
-            df_tmp['Periodo'][i] = per;
+            per = str(meses[it_mes]) + " " + str(it_anio)
+            df_tmp['Periodo'][i] = per
 
             if df_prod['Periodo'][it_df_prod] == per:
                 df_tmp['Total'][i] = df_prod['Total'][it_df_prod]
@@ -154,9 +162,7 @@ def periodo_a_valor(periodo):
 def prediccion(cod_producto, periodo):
     global df_prod, X, y, reg_pred
     df_prod = crear_df_producto(cod_producto)
-    # print(df_prod)
     completar_df_producto()
-    # print(df_prod)
     
     # se aplica regresión lineal
     X=df_prod[['Periodo']]
@@ -165,7 +171,7 @@ def prediccion(cod_producto, periodo):
     
     # predicciones para los valores de X, para crear la línea de la grafica
     reg_pred = reg.predict(X.values)
-           
+    
     val_periodo = periodo_a_valor(periodo)
     # print(val_periodo)
     pred = int( reg.predict([[val_periodo]]) )
@@ -183,6 +189,25 @@ def plotear():
     plt.close()
     #plt.show()
 
-
 #prediccion('[FURN_6666]','setiembre 2022')
-#plotear()
+
+
+
+
+def separar_codigo_nombre(txt):
+    code = txt.split("]")
+    code[0] = code[0] + "]"
+    code[1] = code[1][1:]
+    return code
+
+def get_products():
+    products = []
+    cont = 0
+    for i in lista_productos:
+        i = i.strip()
+        if i[0] == '[':
+            products.append(separar_codigo_nombre(i))
+        cont=cont+1
+    return products
+
+
